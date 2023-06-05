@@ -48,7 +48,38 @@
                             My love for coding has driven you to explore the limitless possibilities and applications of programming.<br>
                             I constantly seek to expand my expertise through research and exploration, ensuring that I stay up-to-date with the latest advancements in the field.
                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
 
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li> <span>UI/UX</span><br>Designing web/app interfaces</li>
+                                <li> <span>Web development</span><br>Web/app development</li>
+                                <li> <span>Retail Management</span><br>Managing clothing retail stores</li>
+                                <li> <span>Dietetics</span><br>Management of human health through diet</li>
+                                <li> <span>Teaching/Tutoring</span><br>Effectively passing knowledge to others</li>
+                            </ul>
+                              
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li> <span>2022</span><br>Call Center Agent</li>
+                                <li> <span>2016-2018</span><br>Math Tutor/coach</li>
+                                <li> <span>2016</span><br>Math, Science and English Tutor</li>
+                                
+                            </ul>
+                              
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li> <span>2015-2021</span><br>BSc Dietetics at the University of the Western Cape</li>
+                                <li> <span>2021-2022</span><br>Diploma in Retail Management at Alison Online</li>
+                                <li> <span>2022</span><br>TEFL Certificate at Teacher Record</li>
+                                <li> <span>2023</span><br>Software Development at CodeSpace</li>
+                            </ul>
+                              
                         </div>
                     </div>
                 </div>
@@ -56,6 +87,11 @@
             </div>
         </div>
         
-        <script src="" async defer></script>
+        <script src="" async defer>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab (tabName)
+        </script>
     </body>
 </html>
