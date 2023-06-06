@@ -78,6 +78,7 @@ nav ul li a:hover::after{
 }
 
 /*--------------------------------------about me--------------------------------*/
+
 #about {
     padding: 80px 0;
     color: #1aecab;
@@ -155,5 +156,5 @@ nav ul li a:hover::after{
 }
 
 .tab-contents.active-tab{
-
+    
 }
