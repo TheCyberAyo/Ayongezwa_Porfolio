@@ -1,97 +1,152 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>DOCUMENT</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <img src="images/threalAYON.png" class="logo">
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">SERVICES</a></li>
-                        <li><a href="#">PORTFOLIO</a></li>
-                        <li><a href="#">CONTACT</a></li>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Personal Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/647f7a9d84.js" crossorigin="anonymous"></script>
+</head>
 
-                    </ul>
-                </nav>
-                <div class="headerText">
-                    <p>SOFTWARE DEVELOPER</p>
-                    <h1>Hi, I am <span>Ayongezwa</span><br> Ndamase  from <br> <span>Cape Town</span></h1>
+<body>
+    <div id="header">
+        <div class="">
+            <nav>
+                <img src="images/threalAYON.png" class="logo">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>SOFTWARE DEVELOPER</p>
+                <h1>Hi, I am <span>Ayongezwa</span><br> Ndamase  from <br> <span>Cape Town</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------about me--------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/images/WhatsApp Image 2023-06-01 at 13.48.06.jpg" alt="Ayongezwa Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a 27-year-old junior software developer with a diverse background and a passion for helping others. 
+                        My academic history lies in the field of health, demonstrating my dedication to understanding the human body and promoting well-being. 
+                        However, I have also found joy and success in teaching English and Mathematics, showcasing my versatility and ability to 
+                        communicate complex concepts effectively. <br>
 
+                        As a software developer, I possess the skills and knowledge necessary to create innovative solutions and contribute to the ever-evolving tech industry. 
+                        My love for coding has driven me to explore paths I never imagined I would.<br>
+                        I constantly seek to expand my expertise through research and exploration, ensuring that I stay up-to-date with the latest advancements in the field.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> <span>UI/UX</span><br>Designing web/app interfaces</li>
+                            <li> <span>Web development</span><br>Web/app development</li>
+                            <li> <span>Retail Management</span><br>Managing clothing retail stores</li>
+                            <li> <span>Dietetics</span><br>Management of human health through diet</li>
+                            <li> <span>Teaching/Tutoring</span><br>Effectively passing knowledge to others</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li> <span>2022</span><br>Call Center Agent</li>
+                            <li> <span>2016-2018</span><br>Math Tutor/coach</li>
+                            <li> <span>2016</span><br>Math, Science and English Tutor</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li> <span>2015-2021</span><br>BSc Dietetics at the University of the Western Cape</li>
+                            <li> <span>2021-2022</span><br>Diploma in Retail Management at Alison Online</li>
+                            <li> <span>2022</span><br>TEFL Certificate at Teacher Record</li>
+                            <li> <span>2023</span><br>Software Development at CodeSpace</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- -------------------------about me--------------- -->
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="/images/WhatsApp Image 2023-06-01 at 13.48.06.jpg" alt="">
-                    </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">About Me</h1>
-                        <p>I am a 28-year-old junior software developer with a diverse background and a passion for helping others. 
-                            My academic history lies in the field of health, demonstrating my dedication to understanding the human body and promoting well-being. 
-                            However, I have also found joy and success in teaching English and Mathematics, showcasing my versatility and ability to 
-                            communicate complex concepts effectively. <br>
-
-                            As a software developer, I possess the skills and knowledge necessary to create innovative solutions and contribute to the ever-evolving tech industry. 
-                            My love for coding has driven you to explore the limitless possibilities and applications of programming.<br>
-                            I constantly seek to expand my expertise through research and exploration, ensuring that I stay up-to-date with the latest advancements in the field.
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li> <span>UI/UX</span><br>Designing web/app interfaces</li>
-                                <li> <span>Web development</span><br>Web/app development</li>
-                                <li> <span>Retail Management</span><br>Managing clothing retail stores</li>
-                                <li> <span>Dietetics</span><br>Management of human health through diet</li>
-                                <li> <span>Teaching/Tutoring</span><br>Effectively passing knowledge to others</li>
-                            </ul>
-                              
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li> <span>2022</span><br>Call Center Agent</li>
-                                <li> <span>2016-2018</span><br>Math Tutor/coach</li>
-                                <li> <span>2016</span><br>Math, Science and English Tutor</li>
-                                
-                            </ul>
-                              
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li> <span>2015-2021</span><br>BSc Dietetics at the University of the Western Cape</li>
-                                <li> <span>2021-2022</span><br>Diploma in Retail Management at Alison Online</li>
-                                <li> <span>2022</span><br>TEFL Certificate at Teacher Record</li>
-                                <li> <span>2023</span><br>Software Development at CodeSpace</li>
-                            </ul>
-                              
-                        </div>
-                    </div>
+    <!-------------------------Services--------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-light fa-mobile-screen"></i>
+                    <i class="fa-solid fa-glasses"></i>
+                    <h2>Responsive Web Design:</h2>
+                    <p> I specialize in creating websites that are responsive and adapt seamlessly to various screen sizes and devices.
+                         This ensures an optimal user experience across desktops, tablets, and mobile devices.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-react"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h2>Front-End Development:</h2>
+                    <p> I excel in creating visually appealing and user-friendly interfaces using HTML, CSS, and JavaScript. 
+                        I ensure that the front-end is responsive, optimized for different devices, and adheres to the latest web 
+                        standards. I focus on delivering seamless user experiences with intuitive navigation and engaging interactions.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-node-js"></i>
+                    <i class="fa-brands fa-php"></i>
+                    <h2>Back-End Development:</h2>
+                    <p>  I have expertise in back-end technologies such as server-side programming languages (PHP and Node.js),
+                         databases, and frameworks (Node.js). I develop robust and scalable back-end systems that handle data storage, 
+                         retrieval, and processing, ensuring efficient functionality for the website or web application</p>
+                    <a href="#">Learn More</a>
                 </div>
 
             </div>
         </div>
-        
-        <script src="" async defer>
+    </div>
+    <!-- -------------------------------------Porfolio------------------------------- -->
+    <div id="porfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h>
+            <div class="work-list">
+                <div class="work">
+                    <img src="" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
-            function opentab (tabName)
-        </script>
-    </body>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function openTab(tabName) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+</body>
 </html>
