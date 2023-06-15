@@ -15,13 +15,15 @@
         <div class="">
             <nav>
                 <img src="images/threalAYON.png" class="logo">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">PORTFOLIO</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>SOFTWARE DEVELOPER</p>
@@ -119,7 +121,7 @@
         </div>
     </div>
     <!-- -------------------------------------Porfolio------------------------------- -->
-    <div id="porfolio">
+    <div id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h>
             <div class="work-list">
@@ -180,6 +182,7 @@
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <botton type="submit" class="btn btn2">Submit</botton>
                 </form>
+                <span id="msg">HELLO</span>
             </div>
         </div>
     </div>
@@ -204,5 +207,19 @@
             document.getElementById(tabName).classList.add("active-tab");
         }
     </script>
+
+    <script>
+        const sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+
 </body>
 </html>
