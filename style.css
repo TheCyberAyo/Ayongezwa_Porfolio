@@ -72,7 +72,7 @@ nav ul li a:hover::after{
 
 .header-text {
     margin-top: 20%;
-    font-size: 30px;
+    font-size: 80px;
     padding-left: 30px;
 }
 
@@ -82,8 +82,6 @@ nav ul li a:hover::after{
 }
 
 .headerText h1 span{
-    color: rgb(64, 255, 0);
-    font-style: italic;
 }
 
 /*--------------------------------------about me--------------------------------*/
