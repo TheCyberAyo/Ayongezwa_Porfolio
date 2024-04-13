@@ -81,8 +81,17 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 
-.headerText h1 span{
+.header-text h3{
+    font-size: 40px;
+    margin-top: 20px;
 }
+
+.header-text p{
+    font-size: 12px;
+    margin-top: 20px;
+    color: blue;
+}
+
 
 /*--------------------------------------about me--------------------------------*/
 
