@@ -87,7 +87,7 @@ nav ul li a:hover::after{
 }
 
 .header-text p{
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 20px;
     color: blue;
 }
