@@ -1,6 +1,3 @@
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -16,7 +13,6 @@ body {
     background: #080808;
     color: #fff;
 }
-
 
 #header {
     width: 100%;
@@ -75,11 +71,12 @@ nav ul li a:hover::after{
     display: grid;
     grid-template-areas: 
     "picture content carousel"
-    "footer footer footer";
+    "picture footer carousel";
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 4fr 1fr;
     gap: 10px;
 }
+
 
 .content {
     grid-area: content;
@@ -92,26 +89,47 @@ nav ul li a:hover::after{
     align-items: center;
 }
 
-    /* margin-top: 15%;
-    font-size: 80px;
-    padding-left: 200px;
-    padding-right: 200px;
-} */
-
-.container h1{
+.content h1{
     font-size: 55px;
     margin-top: 20px;
 }
 
-.container h3{
+.content h3{
     font-size: 55px;
     margin-top: 20px;
 }
 
-.container p{
+.content p{
     font-size: 17px;
     margin-top: 20px;
-    color: blue;
+    color: #0000FF;
+    text-shadow: #080808;
+}
+
+.footer{
+    grid-area: footer;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.oval{
+    text-decoration: none;
+    width: 130px;
+    height: 35px;
+    background-color: #A8FF35;
+    border-radius: 15%;
+    padding: 8px 11px;
+}
+
+.oval p a{
+    text-decoration: none;
+    font-size: small;
+    color: black;
+    font-weight: bold;
 }
 
 
