@@ -71,11 +71,31 @@ nav ul li a:hover::after{
 }
 
 .container {
-    margin-top: 15%;
+    display: grid;
+    grid-template-areas: 
+    "picture content carousel"
+    "footer footer footer";
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    gap: 10px;
+}
+
+.content {
+    grid-area: content;
+    margin-top: 12%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* margin-top: 15%;
     font-size: 80px;
     padding-left: 200px;
     padding-right: 200px;
-}
+} */
 
 .container h1{
     font-size: 60px;
@@ -83,12 +103,12 @@ nav ul li a:hover::after{
 }
 
 .container h3{
-    font-size: 40px;
+    font-size: 60px;
     margin-top: 20px;
 }
 
 .container p{
-    font-size: 16px;
+    font-size: 17px;
     margin-top: 20px;
     color: blue;
 }
