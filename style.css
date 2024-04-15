@@ -24,6 +24,7 @@ body {
     background-image: url(images/galaxybackground.png);
     background-size: cover;
     background-position: center;
+    padding: 10px;
 }
 
 .container {
@@ -98,12 +99,12 @@ nav ul li a:hover::after{
 } */
 
 .container h1{
-    font-size: 60px;
+    font-size: 55px;
     margin-top: 20px;
 }
 
 .container h3{
-    font-size: 60px;
+    font-size: 55px;
     margin-top: 20px;
 }
 
