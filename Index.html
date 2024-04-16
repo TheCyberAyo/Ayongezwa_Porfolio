@@ -57,55 +57,63 @@
     </div>
     <!-- -------------------------about me--------------- -->
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="/images/WhatsApp Image 2023-06-01 at 13.48.06.jpg" alt="Ayongezwa Image">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>I am a 27-year-old junior software developer with a diverse background and a passion for helping others. 
-                        My academic history lies in the field of health, demonstrating my dedication to understanding the human body and promoting well-being. 
-                        However, I have also found joy and success in teaching English and Mathematics, showcasing my versatility and ability to 
-                        communicate complex concepts effectively. <br>
-
-                        As a software developer, I possess the skills and knowledge necessary to create innovative solutions and contribute to the ever-evolving tech industry. 
-                        My love for coding has driven me to explore paths I never imagined I would.<br>
-                        I constantly seek to expand my expertise through research and exploration, ensuring that I stay up-to-date with the latest advancements in the field.
+        <div class="about-me">
+            <div class="info">
+                <h1 class="about-me-text">About Me</h1>
+                <div class="info-box">
+                    <p>Hi there! I'm Ayongezwa,  a versatile software developer 
+                        with a passion for crafting robust solutions  using C# and 
+                        JavaScript.  With a solid foundation in  healthcare from 
+                        my educational background, I bring a unique perspective 
+                        to my approach in solving technical challenges
                     </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
-                        <p class="tab-links" onclick="openTab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li> <span>UI/UX</span><br>Designing web/app interfaces</li>
-                            <li> <span>Web development</span><br>Web/app development</li>
-                            <li> <span>Retail Management</span><br>Managing clothing retail stores</li>
-                            <li> <span>Dietetics</span><br>Management of human health through diet</li>
-                            <li> <span>Teaching/Tutoring</span><br>Effectively passing knowledge to others</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li> <span>2022</span><br>Call Center Agent</li>
-                            <li> <span>2016-2018</span><br>Math Tutor/coach</li>
-                            <li> <span>2016</span><br>Math, Science and English Tutor</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li> <span>2015-2021</span><br>BSc Dietetics at the University of the Western Cape</li>
-                            <li> <span>2021-2022</span><br>Diploma in Retail Management at Alison Online</li>
-                            <li> <span>2022</span><br>TEFL Certificate at Teacher Record</li>
-                            <li> <span>2023</span><br>Software Development at CodeSpace</li>
-                        </ul>
-                    </div>
                 </div>
+
+                <div class="tabs">
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                    <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                    <p class="tab-links" onclick="openTab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing web/app interfaces</li>
+                        <li><span>Web development</span><br>Web/app development</li>
+                        <li><span>Dietetics</span><br>Management of human health through diet</li>
+                        <li><span>Teaching/Tutoring</span><br>Effectively passing knowledge to others</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024</span><br>Intern Back-End Developer</li>
+                        <li><span>2022</span><br>Call Center Agent</li>
+                        <li><span>2016-2018</span><br>Math Tutor/coach</li>
+                        <li><span>2016</span><br>Math, Science and English Tutor</li>
+                        
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2015-2021</span><br>BSc Dietetics at the University of the Western Cape</li>
+                        <li><span>2021-2022</span><br>Diploma in Retail Management at Alison Online</li>
+                        <li><span>2022</span><br>TEFL Certificate at Teacher Record</li>
+                        <li><span>2023</span><br>Software Development at CodeSpace</li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+            <div class="profile-picture">
+                <img src="images/Ayo.png" alt="profile-picture of Ayongezwa">
+            </div>
+            <div class="description">
+
             </div>
         </div>
-    </div>
+    </div>                      
 
     <!-------------------------Services--------------------->
     <div id="services">
@@ -213,37 +221,6 @@
     <div class="copyright"></div>
     <p>Copyright <i class="fa-solid fa-copyright"></i>  Designed by Ayongezwa Ndamase  </p>
 </div>
-
-
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function openTab(tabName) {
-            for (var tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-
-            for (var tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabName).classList.add("active-tab");
-        }
-    </script>
-
-    <script>
-        const sidemenu = document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-
-    </script>
-
+<script src="script.js"></script>
 </body>
 </html>
