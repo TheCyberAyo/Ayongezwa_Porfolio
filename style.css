@@ -145,6 +145,11 @@ nav ul li a:hover::after{
     background-color: white;
 }
 
+.about-me-text{
+    color: black;
+    font-weight: bold;
+    padding: 20px;
+}
 .about-me {
     display: grid;
     grid-template-areas: 
@@ -155,18 +160,24 @@ nav ul li a:hover::after{
     gap: 10px;
 }
 
+
 .info {
-    padding-top: 5%;
+    grid-area: info;
+    padding-top: 0%;
     margin-left: 20px;
 }
 
 .info .info-box{
-    background-color: black;
-    color: white;
+    color: black;
+    font-size: small;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 10px;
-    border: none;
-    width: 100%;
+    padding: 10px 30px;
+    margin: 5px 20px;
+    border: blue;
+    border-radius: 25%;
+    border-style: ridge;
+    width: 80%;
+    
 }
 
 .profile-picture{
@@ -174,10 +185,21 @@ nav ul li a:hover::after{
 }
 
 
+.info .tabs {
+    color: black;
+    font-size: small;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 60px 40px 10px 40px;
+    padding: 10px 30px;
+    border: blue;
+    border-style: dashed;
+    border-radius: 10%;
+    width: 75%;
+}
 
 .tab-titles {
     display: flex;
-    padding: 20px 0 40px;
+    padding: 8px 40px;
 } 
 
 .tab-links {
@@ -192,7 +214,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: rgb(64, 255, 0);
+    background: #A8FF35;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -209,7 +231,7 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: rgb(64, 255, 0);
+    color: Blue;
     font-size: 14px;
 }
 
@@ -219,6 +241,19 @@ nav ul li a:hover::after{
 
 .tab-contents.active-tab{
     display: block;
+}
+
+.profile-picture{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.description
+.des-images{
+    width: 150px;
+    height: 150px;
+    padding-left: 10px;
 }
 
 /* -------------------------------------Services------------------------ */
