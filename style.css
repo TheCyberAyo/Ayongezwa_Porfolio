@@ -180,11 +180,6 @@ nav ul li a:hover::after{
     
 }
 
-.profile-picture{
-
-}
-
-
 .info .tabs {
     color: black;
     font-size: small;
@@ -249,11 +244,27 @@ nav ul li a:hover::after{
     height: 100%;
 }
 
-.description
+.description {
+    padding-top: 50px;
+}
+
+.skills-field{
+    display: flex;
+    gap: 20px;
+
+}
+
+.skill-description{
+    margin-top: 30px;
+}
+
+
+
 .des-images{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 120px;
     padding-left: 10px;
+    margin-top: 20px;
 }
 
 /* -------------------------------------Services------------------------ */
