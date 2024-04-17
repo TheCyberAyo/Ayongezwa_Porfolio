@@ -161,7 +161,7 @@ nav ul li a:hover::after{
 }
 
 
-.info {
+.about-me .info {
     grid-area: info;
     padding-top: 0%;
     margin-left: 20px;
@@ -239,6 +239,7 @@ nav ul li a:hover::after{
 }
 
 .profile-picture{
+    grid-area: profile-picture;
     margin: 0px;
     padding: 0px;
     height: 100%;
@@ -274,6 +275,60 @@ nav ul li a:hover::after{
     height: 120px;
     padding-left: 10px;
     margin-top: 20px;
+}
+
+.about-me .footer {
+    grid-area: footer;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+}
+
+.moving-image {
+    position: absolute;
+    height: 100px;
+    width: 180px;
+    opacity: 1; /* image shows from the beginning*/
+}
+
+.moving-image:nth-child(1) {
+    animation: moveImages 70s linear infinite; /* Adjust duration for all images to move sequentially */
+}
+
+.moving-image:nth-child(2) {
+    animation: moveImages 70s linear infinite -15s; /* Adjust delay for each subsequent image */
+}
+
+.moving-image:nth-child(3) {
+    animation: moveImages 70s linear infinite -30s;
+}
+
+.moving-image:nth-child(4) {
+    animation: moveImages 70s linear infinite -45s;
+}
+
+.moving-image:nth-child(5) {
+    animation: moveImages 70s linear infinite -60s;
+}
+
+.moving-image:nth-child(6) {
+    animation: moveImages 70s linear infinite -75s;
+}
+
+.moving-image:nth-child(7) {
+    animation: moveImages 70s linear infinite -90s;
+}
+
+@keyframes moveImages {
+    0% {
+        left: 0;
+        opacity: 1; /* Make each image visible at the start */
+    }
+    100% {
+        left: calc(100% + 180px);
+        opacity: 1; /* Maintain opacity until the end */
+    }
 }
 
 /* -------------------------------------Services------------------------ */
