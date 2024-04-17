@@ -258,7 +258,16 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 
+.skill-description h4{
+    margin-bottom: 20px;
+    color: red;
+    font-weight: bolder;
+}
 
+.skill-description p{
+    color: black;
+    
+}
 
 .des-images{
     width: 130px;
