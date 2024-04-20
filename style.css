@@ -280,7 +280,7 @@ nav ul li a:hover::after{
 .about-me .footer {
     grid-area: footer;
     position: relative;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     height: 100px;
 }
@@ -293,31 +293,35 @@ nav ul li a:hover::after{
 }
 
 .moving-image:nth-child(1) {
-    animation: moveImages 10s linear infinite; /* Adjust duration for all images to move sequentially */
+    animation: moveImages 70s linear infinite; /* Adjust duration for all images to move sequentially */
 }
 
 .moving-image:nth-child(2) {
-    animation: moveImages 10s linear infinite -10s; /* Adjust delay for each subsequent image */
+    animation: moveImages 70s linear infinite -10s; /* Adjust delay for each subsequent image */
 }
 
 .moving-image:nth-child(3) {
-    animation: moveImages 10s linear infinite -20s;
+    animation: moveImages 70s linear infinite -20s;
 }
 
 .moving-image:nth-child(4) {
-    animation: moveImages 10s linear infinite -30s;
+    animation: moveImages 70s linear infinite -30s;
 }
 
 .moving-image:nth-child(5) {
-    animation: moveImages 10s linear infinite -40s;
+    animation: moveImages 70s linear infinite -40s;
 }
 
 .moving-image:nth-child(6) {
-    animation: moveImages 10s linear infinite -50s;
+    animation: moveImages 70s linear infinite -50s;
 }
 
 .moving-image:nth-child(7) {
     animation: moveImages 10s linear infinite -60s;
+}
+
+.moving-image:nth-child(8) {
+    animation: moveImages 10s linear infinite -80s;
 }
 
 @keyframes moveImages {
