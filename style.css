@@ -157,9 +157,7 @@ nav ul li a:hover::after{
     "footer footer footer";
     grid-template-columns: 1.5fr 1fr 1.5fr;
     grid-template-rows: 5fr 1fr;
-    gap: 10px;
 }
-
 
 .about-me .info {
     grid-area: info;
@@ -279,7 +277,8 @@ nav ul li a:hover::after{
 
 .about-me .footer {
     grid-area: footer;
-    position: relative;
+    position: fixed;
+    bottom: 0;
     width: 100%; /* Adjusted width for full width */
     overflow: hidden;
     height: 100px;
@@ -288,9 +287,45 @@ nav ul li a:hover::after{
 .moving-image {
     position: absolute;
     height: 100px;
-    width: 180px;
-    opacity: 1;
-    animation: moveImages 70s linear infinite; /* Adjusted animation for continuous movement */
+    width: calc(100% / 9); /* Divide the width equally among the number of images */
+    opacity: 1; /* image shows from the beginning */
+    animation: moveImages 40s linear infinite; /* Adjust duration for all images to move sequentially */
+}
+
+.moving-image:nth-child(1) {
+    animation: moveImages 10s linear infinite; /* Adjust duration for all images to move sequentially */
+}
+
+.moving-image:nth-child(2) {
+    animation: moveImages 10s linear infinite 7s; /* Adjust delay for each subsequent image */
+}
+
+.moving-image:nth-child(3) {
+    animation: moveImages 10s linear infinite 14s;
+}
+
+.moving-image:nth-child(4) {
+    animation: moveImages 10s linear infinite 21s;
+}
+
+.moving-image:nth-child(5) {
+    animation: moveImages 10s linear infinite 28s;
+}
+
+.moving-image:nth-child(6) {
+    animation: moveImages 10s linear infinite 35s;
+}
+
+.moving-image:nth-child(7) {
+    animation: moveImages 10s linear infinite 42s;
+}
+
+.moving-image:nth-child(8) {
+    animation: moveImages 10s linear infinite 49s;
+}
+
+.moving-image:nth-child(9) {
+    animation: moveImages 10s linear infinite 56s;
 }
 
 @keyframes moveImages {
@@ -302,8 +337,9 @@ nav ul li a:hover::after{
     }
 }
 
-/* -------------------------------------Services------------------------ */
 
+/* -------------------------------------Services------------------------ */
+/* 
 #service{
     padding: 30px 0;
 }
@@ -349,7 +385,7 @@ nav ul li a:hover::after{
     transform: translateY(-10px)
 }
 /* ----------------------------------portfolio---------------------------- */
-#portfolio{
+/*#portfolio{
     padding: 50px 0;
 }
 
@@ -436,7 +472,7 @@ nav ul li a:hover::after{
 }
 
 /* ----------------------contact--------------------------- */
-.contact-left{
+/*.contact-left{
     flex-basis: 35%;
 }
 
@@ -514,7 +550,7 @@ form .btn2{
 }
 
 /* -----------------------------css for smaller screen--------------------- */
-nav .fas{
+/*nav .fas{
     display: none;
 }
 
@@ -596,4 +632,4 @@ nav .fas{
 
 
 
-}
+} */
