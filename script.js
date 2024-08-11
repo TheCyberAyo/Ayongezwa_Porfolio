@@ -1,23 +1,24 @@
-function openTab(tabName) {
-    // Get all tab contents.
-    var tabContents = document.getElementsByClassName("tab-contents");
 
-    // Hide all tab contents
-    for (var i = 0; i < tabContents.length; i++) {
-        tabContents[i].classList.remove("active-tab");
-    }
+        function openTab(tabId) {
+            var tabs = document.querySelectorAll('.tab-contents'); //gets tab content elements
+            
+            var tabLinks = document.querySelectorAll('.tab-links'); // gets tab links
 
-    // Show the selected tab content
-    document.getElementById(tabName).classList.add("active-tab");
+            
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active-tab'); 
+            });
+            tabLinks.forEach(function(link) {
+                link.classList.remove('active-link');
+            }); //hides all tab contents and remove 'active' class from all links
 
-    // Get all tab links
-    var tabLinks = document.getElementsByClassName("tab-links");
+            
+            document.getElementById(tabId).classList.add('active-tab');
+            var activeLink = document.querySelector(`.tab-links[onclick="openTab('${tabId}')"]`);
+            if (activeLink) {
+                activeLink.classList.add('active-link');
+            } // Shows selected tab content and add 'active' class to the clicked link
+        }
 
-    // Remove active class from all tab links
-    for (var i = 0; i < tabLinks.length; i++) {
-        tabLinks[i].classList.remove("active-link");
-    }
-
-    // Add active class to the clicked tab link
-    event.currentTarget.classList.add("active-link");
-}
+        
+        openTab('skills'); //first tab opens by default
