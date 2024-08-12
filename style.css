@@ -277,7 +277,7 @@ nav ul li a:hover::after{
 
 .about-me .footer {
     grid-area: footer;
-    position: fixed;
+    position: relative;
     bottom: 0;
     height: 100px;
     width: 100%; /* Adjusted width for full width */
@@ -299,7 +299,7 @@ nav ul li a:hover::after{
 }
 @keyframes scrollLeft {
     from {
-        transform: translateX(100%); /* Start from the right */
+        transform: translateX(0); /* Start from the right */
     }
     to {
         transform: translateX(-100%); /* End at the left */
