@@ -295,8 +295,16 @@ nav ul li a:hover::after{
     width: 250px; /* Maintain aspect ratio */
     flex-shrink: 0; /* Prevent images from shrinking */
     margin-right: 10px; /* Space between images (optional) */
-}
 
+}
+@keyframes scrollLeft {
+    from {
+        transform: translateX(100%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-100%); /* End at the left */
+    }
+}
 
 /* -------------------------------------Services------------------------ */
 /* 
