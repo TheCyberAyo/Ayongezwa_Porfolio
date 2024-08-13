@@ -307,7 +307,6 @@ nav ul li a:hover::after{
 }
 
 /* -------------------------------------Services------------------------ */
-/* 
 #service{
     padding: 30px 0;
 }
@@ -352,6 +351,7 @@ nav ul li a:hover::after{
     background: rgb(64, 255, 0);
     transform: translateY(-10px)
 }
+
 /* ----------------------------------portfolio---------------------------- */
 /*#portfolio{
     padding: 50px 0;
