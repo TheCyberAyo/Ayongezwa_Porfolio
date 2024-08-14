@@ -80,7 +80,7 @@ nav ul li a:hover::after{
 
 .container .content {
     grid-area: content;
-    margin-top: 12%;
+    margin-top: 25%;
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
@@ -90,25 +90,25 @@ nav ul li a:hover::after{
 }
 
 .container .content h1{
-    font-size: 55px;
-    margin-top: 20px;
+    font-size: 60px;
+    margin-top: 30px;
 }
 
 .container .content h3{
     font-size: 55px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .container .content p{
     font-size: 17px;
-    margin-top: 20px;
+    margin-top: 40px;
     color: #0000FF;
     text-shadow: #080808;
 }
 
 .container .footer{
     grid-area: footer;
-    margin-top: 4%;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
