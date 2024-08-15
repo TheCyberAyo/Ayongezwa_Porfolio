@@ -56,7 +56,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: rgb(64, 255, 0);
+    background: lightskyblue;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -89,21 +89,35 @@ nav ul li a:hover::after{
     align-items: center;
 }
 
+@keyframes mainColors {
+    0%{color: white}
+    33%{color: lightskyblue}
+    66%{color: blue}
+}
+
 .container .content h1{
+    animation: mainColors 3s linear infinite;
     font-size: 60px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bolder;
     margin-top: 30px;
 }
 
 .container .content h3{
     font-size: 55px;
+    font-style: italic;
+    font-weight: bold;
+    color: lightskyblue;
+    text-shadow: #fff;
     margin-top: 30px;
 }
+
+
 
 .container .content p{
     font-size: 17px;
     margin-top: 40px;
-    color: #0000FF;
-    text-shadow: #080808;
+    text-shadow: #0000FF;
 }
 
 .container .footer{
@@ -120,7 +134,7 @@ nav ul li a:hover::after{
     text-decoration: none;
     width: 130px;
     height: 35px;
-    background-color: #A8FF35;
+    background-color: lightskyblue;
     border-radius: 15%;
     padding: 8px 11px;
 }
@@ -128,7 +142,7 @@ nav ul li a:hover::after{
 .oval p a{
     text-decoration: none;
     font-size: small;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 
@@ -141,12 +155,11 @@ nav ul li a:hover::after{
 #about {
     padding: 0%;
     margin: 0%;
-    color: #1aecab;
-    background-color: white;
+    background-color: black;
 }
 
 .about-me-text{
-    color: black;
+    color:lightskyblue;
     font-weight: bold;
     padding: 20px;
 }
@@ -166,12 +179,12 @@ nav ul li a:hover::after{
 }
 
 .info .info-box{
-    color: black;
+    color:white;
     font-size: small;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px 30px;
     margin: 5px 20px;
-    border: blue;
+    border: lightskyblue;
     border-radius: 25%;
     border-style: ridge;
     width: 80%;
@@ -179,12 +192,12 @@ nav ul li a:hover::after{
 }
 
 .info .tabs {
-    color: black;
+    color: white;
     font-size: small;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 60px 40px 10px 40px;
     padding: 10px 30px;
-    border: blue;
+    border: lightskyblue;
     border-style: dashed;
     border-radius: 10%;
     width: 75%;
@@ -207,7 +220,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #A8FF35;
+    background: lightskyblue;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -224,7 +237,12 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: Blue;
+    color: lightskyblue;
+    font-size: 14px;
+}
+
+.tab-contents ul li strong{
+    color: blue;
     font-size: 14px;
 }
 
@@ -259,12 +277,12 @@ nav ul li a:hover::after{
 
 .skill-description h4{
     margin-bottom: 20px;
-    color: red;
+    color:lightskyblue;
     font-weight: bolder;
 }
 
 .skill-description p{
-    color: black;
+    color: white;
     
 }
 
@@ -307,7 +325,9 @@ nav ul li a:hover::after{
 }
 
 /* -------------------------------------Services------------------------ */
-
+#services {
+    background-color: #fff;
+}
 .container2{
     display: grid;
     grid-template-areas: 
@@ -321,18 +341,18 @@ nav ul li a:hover::after{
 
 .subtitle{
     grid-area: subtitle;
+    color: blue;
 }
 
 .services-list{
     grid-area: services-list;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     
 }
 
 .services-list div{
-    background: #262626;
     height:300px;
     width: 33%;
     padding: 40px;
@@ -364,8 +384,9 @@ nav ul li a:hover::after{
 }
 
 .services-list div:hover{
-    background: rgb(64, 255, 0);
-    transform: translateY(-10px)
+    background: lightskyblue;
+    transform: translateY(-10px);
+    color: black;
 }
 
 /* ----------------------------------portfolio---------------------------- */
