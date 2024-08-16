@@ -305,12 +305,12 @@ nav ul li a:hover::after{
 .footer-inner {
     display: flex;
     white-space: nowrap; /* Prevent line breaks */
-    animation: scrollLeft 20s linear infinite; /*Adjust duration as needed8*/
+    animation: scrollLeft 40s linear infinite; /*Adjust duration as needed8*/
 }
 
 .footer-image {
-    height: 100px; /* Adjust height as needed */
-    width: 250px; /* Maintain aspect ratio */
+    height: 70px; /* Adjust height as needed */
+    width: 160px; /* Maintain aspect ratio */
     flex-shrink: 0; /* Prevent images from shrinking */
     margin-right: 10px; /* Space between images (optional) */
 
