@@ -11,13 +11,13 @@ html{
 
 body {
     background: #080808;
-    color: #fff;
+    color: black;
 }
 
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(images/space\ photo.png);
+    background-image: url(images/yellow.jpeg);
     background-size: cover;
     background-position: center;
     padding: 10px;
@@ -87,11 +87,13 @@ nav ul li a:hover::after{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: black;
+    font-weight: bolder;
 }
 
 @keyframes mainColors {
-    0%{color: white}
-    33%{color: lightskyblue}
+    0%{color: purple}
+    33%{color: black}
     66%{color: blue}
 }
 
@@ -155,7 +157,7 @@ nav ul li a:hover::after{
 #about {
     padding: 0%;
     margin: 0%;
-    background-color: black;
+    background-color: yellowgreen;
 }
 
 .about-me-text{
@@ -326,7 +328,7 @@ nav ul li a:hover::after{
 
 /* -------------------------------------Services------------------------ */
 #services {
-    background-color: #fff;
+    background-color: darkgoldenrod;
 }
 .container2{
     display: grid;
