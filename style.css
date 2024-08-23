@@ -326,7 +326,7 @@ nav ul li a:hover::after{
 
 /* -------------------------------------Services------------------------ */
 #services {
-    background-color: #fff;
+    background-color: #0000FF;
 }
 .container2{
     display: grid;
