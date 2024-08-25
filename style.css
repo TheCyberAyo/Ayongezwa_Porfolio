@@ -93,7 +93,7 @@ nav ul li a:hover::after{
 
 @keyframes mainColors {
     0%{color: purple}
-    33%{color: black}
+    33%{color: red}
     66%{color: blue}
 }
 
@@ -109,7 +109,7 @@ nav ul li a:hover::after{
     font-size: 55px;
     font-style: italic;
     font-weight: bold;
-    color: lightskyblue;
+    color: green;
     text-shadow: #fff;
     margin-top: 30px;
 }
@@ -136,7 +136,7 @@ nav ul li a:hover::after{
     text-decoration: none;
     width: 130px;
     height: 35px;
-    background-color: lightskyblue;
+    background-color: green;
     border-radius: 15%;
     padding: 8px 11px;
 }
@@ -144,7 +144,7 @@ nav ul li a:hover::after{
 .oval p a{
     text-decoration: none;
     font-size: small;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
