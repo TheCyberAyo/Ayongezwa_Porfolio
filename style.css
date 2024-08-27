@@ -330,6 +330,7 @@ nav ul li a:hover::after{
 #services {
     background-color: darkgoldenrod;
 }
+
 .container2{
     display: grid;
     grid-template-areas: 
@@ -338,7 +339,6 @@ nav ul li a:hover::after{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     margin: 40px 30px;
-
 }
 
 .subtitle{
@@ -349,7 +349,7 @@ nav ul li a:hover::after{
 .services-list{
     grid-area: services-list;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     
 }
