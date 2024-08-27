@@ -10,7 +10,6 @@ html{
 }
 
 body {
-    background: #080808;
     color: black;
 }
 
@@ -161,7 +160,7 @@ nav ul li a:hover::after{
 }
 
 .about-me-text{
-    color:lightskyblue;
+    color: darkgoldenrod;
     font-weight: bold;
     padding: 20px;
 }
@@ -181,12 +180,12 @@ nav ul li a:hover::after{
 }
 
 .info .info-box{
-    color:white;
+    color: black;
     font-size: small;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px 30px;
     margin: 5px 20px;
-    border: lightskyblue;
+    border: darkgoldenrod;
     border-radius: 25%;
     border-style: ridge;
     width: 80%;
@@ -194,12 +193,12 @@ nav ul li a:hover::after{
 }
 
 .info .tabs {
-    color: white;
+    color:black;
     font-size: small;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 60px 40px 10px 40px;
     padding: 10px 30px;
-    border: lightskyblue;
+    border: darkgoldenrod;
     border-style: dashed;
     border-radius: 10%;
     width: 75%;
@@ -222,7 +221,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: lightskyblue;
+    background: blue;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -239,12 +238,12 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: lightskyblue;
+    color: blue;
     font-size: 14px;
 }
 
 .tab-contents ul li strong{
-    color: blue;
+    color: darkgoldenrod;
     font-size: 14px;
 }
 
@@ -279,12 +278,12 @@ nav ul li a:hover::after{
 
 .skill-description h4{
     margin-bottom: 20px;
-    color:lightskyblue;
+    color: darkgoldenrod;
     font-weight: bolder;
 }
 
 .skill-description p{
-    color: white;
+    color:black;
     
 }
 
@@ -300,18 +299,19 @@ nav ul li a:hover::after{
     position: relative;
     bottom: 0;
     height: 100px;
-    width: 100%; /* Adjusted width for full width */
+    width: 100%;
     overflow: hidden;
+    margin-bottom: 0%;
 }
 
 .footer-inner {
     display: flex;
-    white-space: nowrap; /* Prevent line breaks */
-    animation: scrollLeft 40s linear infinite; /*Adjust duration as needed8*/
+    white-space: nowrap; 
+    animation: scrollLeft 40s linear infinite; 
 }
 
 .footer-image {
-    height: 70px; /* Adjust height as needed */
+    height: 70px; 
     width: 160px; /* Maintain aspect ratio */
     flex-shrink: 0; /* Prevent images from shrinking */
     margin-right: 10px; /* Space between images (optional) */
@@ -329,6 +329,8 @@ nav ul li a:hover::after{
 /* -------------------------------------Services------------------------ */
 #services {
     background-color: darkgoldenrod;
+    color:#000;
+    margin-top: 0%;
 }
 
 .container2{
@@ -341,9 +343,10 @@ nav ul li a:hover::after{
     margin: 40px 30px;
 }
 
-.subtitle{
+.sub-title{
+    margin-top: 30px;
+    margin-bottom: 20px;
     grid-area: subtitle;
-    color: blue;
 }
 
 .services-list{
@@ -364,6 +367,7 @@ nav ul li a:hover::after{
     border-radius: 10px;
     margin: 15px;
     transition: background 0.5s, transform 0.5s;
+    color: #fff;
 }
 
 .services-list div i{
@@ -379,16 +383,20 @@ nav ul li a:hover::after{
 
 .services-list div a{
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-size: 12px;
     margin-top: 15px;
     display:inline-block;
 }
 
 .services-list div:hover{
-    background: lightskyblue;
+    background: yellowgreen;
     transform: translateY(-10px);
     color: black;
+}
+
+.services-list div a:hover{
+    color: darkgoldenrod;
 }
 
 /* ----------------------------------portfolio---------------------------- */
@@ -475,7 +483,6 @@ nav ul li a:hover::after{
 
 .btn:hover {
     background: rgb(64, 255, 0);
-
 }
 
 /* ----------------------contact--------------------------- */
