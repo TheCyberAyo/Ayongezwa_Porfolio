@@ -402,7 +402,7 @@ nav ul li a:hover::after{
 /* ----------------------------------portfolio---------------------------- */
 #portfolio{
     padding: 50px 0;
-}
+} 
 
 .work-list{
     display: grid;
@@ -410,6 +410,7 @@ nav ul li a:hover::after{
     grid-gap: 40px;
     margin-top: 50px;
 }
+
 
 .work{
     border-radius: 10px; 
@@ -437,12 +438,12 @@ nav ul li a:hover::after{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
     font-size: 14px;
     transition: height 0.5s
-}
-
+} 
+/*
 .layer h3{
     font-weight: 500;
     margin-bottom: 20px;
@@ -483,7 +484,7 @@ nav ul li a:hover::after{
 
 .btn:hover {
     background: rgb(64, 255, 0);
-}
+} */
 
 /* ----------------------contact--------------------------- */
 /*.contact-left{
