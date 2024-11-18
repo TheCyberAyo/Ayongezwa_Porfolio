@@ -421,6 +421,7 @@ nav ul li a:hover::after{
     height: 500px;
     width: calc(32% - 40px); /* Ensures three items per row with some margin */
     box-sizing: border-box; /* Includes padding and border in width */
+    background-color: #b8860b;
 }
 
 .work img {
@@ -437,7 +438,7 @@ nav ul li a:hover::after{
     bottom: -100%; /* Starts hidden below the `.work` container */
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for visibility */
+    background: #b8860b; /* Semi-transparent background for visibility */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -455,7 +456,6 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -487,7 +487,7 @@ nav ul li a:hover::after{
 
 .btn:hover {
     background: rgb(64, 255, 0);
-} */
+} 
 
 /* ----------------------contact--------------------------- */
 /*.contact-left{
@@ -642,8 +642,8 @@ form .btn2{
     /* .copyright.fa-solid{
         font-size: 11px;
     } */
-/* 
+
     #msg{
-        color: ;
+        color: darkblue;
     }
-   */
+   
