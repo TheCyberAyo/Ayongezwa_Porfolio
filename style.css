@@ -162,7 +162,7 @@ nav ul li a:hover::after{
 #about {
     padding: 0%;
     margin: 0%;
-    background-color: #e8e9eb;
+    background-color: #d9d9d9;
 }
 
 .about-me-text{
@@ -318,23 +318,23 @@ nav ul li a:hover::after{
 
 .footer-image {
     height: 70px; 
-    width: 160px; /* Maintain aspect ratio */
-    flex-shrink: 0; /* Prevent images from shrinking */
-    margin-right: 10px; /* Space between images (optional) */
+    width: 160px; 
+    flex-shrink: 0; 
+    margin-right: 10px;
 
 }
 @keyframes scrollLeft {
     from {
-        transform: translateX(0); /* Start from the right */
+        transform: translateX(0);
     }
     to {
-        transform: translateX(-100%); /* End at the left */
+        transform: translateX(-100%); 
     }
 }
 
 /* -------------------------------------Services------------------------ */
 #services {
-    background-color: darkgoldenrod;
+    background-color: #bebebe;
     color:#000;
     margin-top: 0%;
 }
@@ -406,9 +406,10 @@ nav ul li a:hover::after{
 }
 
 /* ----------------------------------portfolio---------------------------- */
-/* #portfolio{
-    padding: 50px 0;
-}  */
+#portfolio{
+    padding: 20px 0;
+    background-color: #a4a4a4;
+} 
 
 .work-list {
     display: flex;
@@ -427,7 +428,7 @@ nav ul li a:hover::after{
     height: 500px;
     width: calc(32% - 40px); /* Ensures three items per row with some margin */
     box-sizing: border-box; /* Includes padding and border in width */
-    background-color: #b8860b;
+    background-color: #a4a4a4;
 }
 
 .work img {
