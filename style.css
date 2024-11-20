@@ -16,7 +16,7 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(images/yellow.jpeg);
+    background-color: #fff;
     background-size: cover;
     background-position: center;
     padding: 10px;
@@ -38,6 +38,11 @@ nav {
     height: 40px;
 }
 
+.skelly img {
+    padding-top: 100px;
+    max-width: 200px;
+    max-height: 200px;
+}
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -45,9 +50,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     font-size: 14px;
+    font-weight: 800;
     position: relative;
 }
 
@@ -108,7 +114,7 @@ nav ul li a:hover::after{
     font-size: 55px;
     font-style: italic;
     font-weight: bold;
-    color: green;
+    color: lightskyblue;
     text-shadow: #fff;
     margin-top: 30px;
 }
@@ -156,7 +162,7 @@ nav ul li a:hover::after{
 #about {
     padding: 0%;
     margin: 0%;
-    background-color: yellowgreen;
+    background-color: #e8e9eb;
 }
 
 .about-me-text{
@@ -492,14 +498,15 @@ nav ul li a:hover::after{
 
 /* ----------------------contact--------------------------- */
 /* Container and Row Setup */
-.container {
-    max-width: 1200px;
+/* .container {
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
-}
+} */
 
 .row {
     display: flex;
+
     justify-content: space-between;
     flex-wrap: wrap; /* Ensures elements wrap on smaller screens */
     gap: 30px;
@@ -507,7 +514,7 @@ nav ul li a:hover::after{
 
 /* Left Contact Section */
 .contact-left {
-    flex-basis: 35%;
+    /* flex-basis: 35%; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
