@@ -485,7 +485,7 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid rgb(64, 255, 0);
+    border: 1px solid skyblue;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -494,29 +494,31 @@ nav ul li a:hover::after{
 }
 
 .btn:hover {
-    background: rgb(64, 255, 0);
+    background: lightskyblue;
 } 
 
 /* ----------------------contact--------------------------- */
 .contacts {
     background-color: #2F2F2F;
+    padding: 40px;
+    color: #fff;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
-    align-content: center;
-    flex-wrap: wrap; /* Ensures elements wrap on smaller screens */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Ensure elements stack on smaller screens */
+    gap: 20px; /* Add space between sections */
 }
 
 /* Left Contact Section */
 .contact-left {
-    /* flex-basis: 35%; */
+    flex-basis: 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    margin: 20px;
     background-color: #1a1a1a;
     border-radius: 10px;
 }
@@ -527,37 +529,39 @@ nav ul li a:hover::after{
 }
 
 .contact-left p {
-    margin-top: 15px;
+    margin: 10px 0;
     color: #fff;
+    display: flex;
+    align-items: center; /* Align icon with text */
 }
 
 .contact-left p i {
-    color: rgb(64, 255, 0);
+    color: lightskyblue;
     margin-right: 15px;
     font-size: 25px;
 }
 
 .social-icons {
     margin-top: 20px;
+    display: flex;
+    gap: 15px; /* Add space between icons */
 }
 
 .social-icons a {
     text-decoration: none;
     font-size: 30px;
-    margin-right: 15px;
     color: #ababab;
-    display: inline-block;
     transition: transform 0.3s;
 }
 
 .social-icons a:hover {
-    color: rgb(64, 255, 0);
+    color: lightskyblue;
     transform: translateY(-5px);
 }
 
 .btn.btn2 {
     display: inline-block;
-    background: rgb(64, 255, 0);
+    background: lightskyblue;
     color: #fff;
     padding: 12px 30px;
     border-radius: 5px;
@@ -566,8 +570,9 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 
+/* Right Contact Section */
 .contact-right {
-    flex-basis: 60%;
+    flex-basis: 55%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -580,26 +585,40 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
 form input, form textarea {
     width: 100%;
     border: 0;
     outline: none;
     background: #262626;
     padding: 15px;
-    margin: 15px 0;
+    margin: 10px 0;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 6px;
 }
 
-form .btn2 {
+form button {
+    display: block;
+    width: auto;
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
-    background: rgb(64, 255, 0);
+    background: lightskyblue;
     color: #fff;
+    border: none;
     border-radius: 5px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: lightskyblue;
 }
 
 /* Copyright Section */
@@ -614,7 +633,7 @@ form .btn2 {
 }
 
 .copyright i {
-    color: rgb(64, 255, 0);
+    color: lightskyblue;
 }
 
 /* Responsive Design for Small Screens */
@@ -632,6 +651,7 @@ form .btn2 {
         font-size: 16px;
     }
 }
+
 
 @media (max-width: 480px) {
     .contact-left h1 {
