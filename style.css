@@ -170,50 +170,70 @@ nav ul li a:hover::after{
     font-weight: bold;
     padding: 20px;
 }
+
 .about-me {
-    display: grid;
-    grid-template-areas: 
-    "info profile-picture description"
-    "footer footer footer";
-    grid-template-columns: 1.5fr 1fr 1.5fr;
-    grid-template-rows: 5fr 1fr;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    align-items: center; /* Centers items vertically */
+    gap: 20px; /* Adds space between child elements */
+    padding: 20px;
+    background-color: #D3D3D3; /* Background remains consistent */
 }
 
-.about-me .info {
-    grid-area: info;
-    padding-top: 0%;
-    margin-left: 20px;
+.descriptive-section {
+    display: flex;
+    justify-content: space-between; /* Ensures equal spacing between sections */
+    align-items: flex-start; /* Aligns content at the top */
+    gap: 20px; /* Adds space between child elements */
+    padding: 20px;
+    background-color: #D3D3D3; /* Background color remains */
+    width: 100%; /* Occupies full width of the screen */
+    box-sizing: border-box; /* Includes padding in width calculations */
 }
 
-.info .info-box{
+.info, .description {
+    flex: 1; /* Each section takes up equal space */
+    max-width: 50%; /* Ensures sections are capped at half the screen width */
+    box-sizing: border-box; /* Includes padding/borders in width calculations */
+    margin: 50px;
+}
+
+.info {
+    padding-right: 10px; /* Adds spacing between sections */
+}
+
+.description {
+    padding-left: 10px; /* Adds spacing between sections */
+}
+
+.info .info-box {
     color: black;
     font-size: small;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px 30px;
     margin: 5px 20px;
-    border: darkgoldenrod;
+    border: lightskyblue;
     border-radius: 25%;
     border-style: ridge;
-    width: 80%;
-    
+    width: 100%; /* Adjusted for responsiveness */
 }
 
 .info .tabs {
-    color:black;
+    color: black;
     font-size: small;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 60px 40px 10px 40px;
     padding: 10px 30px;
-    border: darkgoldenrod;
-    border-style: dashed;
+    border: lightskyblue;
+    /* border-style: dashed; */
     border-radius: 10%;
-    width: 75%;
+    width: 100%; /* Adjusted for responsiveness */
 }
 
 .tab-titles {
     display: flex;
     padding: 8px 40px;
-} 
+}
 
 .tab-links {
     margin-right: 50px;
@@ -223,7 +243,7 @@ nav ul li a:hover::after{
     position: relative;
 }
 
-.tab-links::after{
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -234,64 +254,70 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 
-.tab-links.active-link::after{
+.tab-links.active-link::after {
     width: 50%;
 }
 
-.tab-contents ul li{
+.tab-contents ul li {
     list-style: none;
     margin: 10px 0;
 }
 
-.tab-contents ul li span{
+.tab-contents ul li span {
     color: blue;
     font-size: 14px;
 }
 
-.tab-contents ul li strong{
-    color: darkgoldenrod;
+.tab-contents ul li strong {
+    color: lightskyblue;
     font-size: 14px;
 }
 
-.tab-contents{
+.tab-contents {
     display: none;
 }
 
-.tab-contents.active-tab{
+.tab-contents.active-tab {
     display: block;
-}
-
-.profile-picture{
-    grid-area: profile-picture;
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
 }
 
 .description {
     padding-top: 50px;
 }
 
-.skills-field{
+.skills-field {
     display: flex;
     gap: 20px;
-
 }
 
-.skill-description{
+.skill-description {
     margin-top: 30px;
 }
 
-.skill-description h4{
+.skill-description h4 {
     margin-bottom: 20px;
-    color: darkgoldenrod;
+    color: lightskyblue;
     font-weight: bolder;
 }
 
-.skill-description p{
-    color:black;
-    
+.skill-description p {
+    color: black;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .descriptive-section {
+        flex-direction: column; /* Stacks sections vertically */
+    }
+    .info, .description {
+        max-width: 100%; /* Sections take up full width */
+        padding: 0;
+    }
+    .info .info-box, .info .tabs {
+        width: 100%; /* Ensures they adjust within the stacked layout */
+    }
+}
+
 
 .des-images{
     width: 130px;
@@ -335,88 +361,106 @@ nav ul li a:hover::after{
 /* -------------------------------------Services------------------------ */
 #services {
     background-color: #A9A9A9;
-    color:#000;
+    color: #000;
     margin-top: 0%;
 }
 
-.container2{
+.container2 {
     display: grid;
-    grid-template-areas: 
-    "subtitle"
-    "services-list";
+    grid-template-areas:
+        "subtitle"
+        "services-list";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     margin: 40px 30px;
 }
 
-.sub-title{
+.sub-title {
     margin-top: 30px;
     margin-bottom: 20px;
     grid-area: subtitle;
 }
 
-.services-list{
+.services-list {
     grid-area: services-list;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-start;
-    
+    justify-content: center;
 }
 
-.services-list div{
-    height:300px;
-    width: 33%;
-    padding: 40px;
+.services-list div {
+    height: auto;
+    width: 100%;
+    max-width: 30%; /* Default for larger screens */
+    padding: 20px;
     font-size: 13px;
     font-weight: 300;
-    border-right: 10px;
     border-radius: 10px;
     margin: 15px;
     transition: background 0.5s, transform 0.5s;
     color: #fff;
+    box-sizing: border-box;
 }
 
-.services-list div i{
+.services-list div i {
     font-size: 30px;
     margin-bottom: 15px;
 }
 
-.services-list div h2{
+.services-list div h2 {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.services-list div a{
+.services-list div a {
     text-decoration: none;
     color: #000;
     font-size: 12px;
     margin-top: 15px;
-    display:inline-block;
+    display: inline-block;
 }
 
-.services-list div:hover{
+.services-list div:hover {
     background: lightskyblue;
     transform: translateY(-10px);
     color: black;
 }
 
-.services-list div a:hover{
-    color:blue;
+.services-list div a:hover {
+    color: blue;
 }
 
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .services-list div {
+        max-width: 45%; /* Adjust to fit two columns */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .services-list div {
+        max-width: 100%; /* Full width for single column */
+    }
+}
+
+
 /* ----------------------------------portfolio---------------------------- */
-#portfolio{
+#portfolio {
     padding: 20px 0;
     background-color: #707070;
-} 
+}
 
 .work-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allows items to wrap to a new row */
-    gap: 20px; /* Adds space between each item */
+    flex-wrap: wrap;
+    gap: 20px;
     margin: 40px;
 }
 
@@ -426,15 +470,15 @@ nav ul li a:hover::after{
     overflow: hidden;
     margin: 20px;
     height: 500px;
-    width: calc(32% - 40px); /* Ensures three items per row with some margin */
-    box-sizing: border-box; /* Includes padding and border in width */
+    width: calc(32% - 40px); /* Default: three items per row */
+    box-sizing: border-box;
     background-color: #a4a4a4;
 }
 
 .work img {
     width: 100%;
-    height: 100%; /* Ensures the image fills the `.work` container */
-    object-fit: cover; /* Maintains the aspect ratio and fills the container */
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -442,19 +486,26 @@ nav ul li a:hover::after{
 
 .layer {
     position: absolute;
-    bottom: -100%; /* Starts hidden below the `.work` container */
+    bottom: -100%;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background for visibility */
+    background: rgba(0, 0, 0, 0.8);
     color: lightskyblue;
     padding: 20px;
     text-align: center;
-    transition: bottom 0.5s ease; /* Smooth slide-up effect */
+    transition: bottom 0.5s ease;
+    font-size: 16px; /* Default font size */
 }
 
 .layer h3 {
+    font-size: 20px; /* Headline size */
     font-weight: 500;
     margin-bottom: 20px;
+}
+
+.layer p {
+    font-size: 14px; /* Description size */
+    line-height: 1.5;
 }
 
 .layer a {
@@ -472,16 +523,17 @@ nav ul li a:hover::after{
 }
 
 .work:hover img {
-    transform: scale(1.1); /* Zoom-in effect on hover */
+    transform: scale(1.1); /* Zoom-in effect */
+    filter: blur(5px); /* Apply a blur effect */
+    transition: transform 0.5s, filter 0.5s; /* Smooth transition for both effects */
 }
 
 .work:hover .layer {
-    bottom: 0; /* Slide up to show the `.layer` content on hover */
+    bottom: 0;
 }
 
-
-.btn{
-    font-size: small;
+.btn {
+    font-size: 16px;
     display: block;
     margin: 50px auto;
     width: fit-content;
@@ -495,13 +547,92 @@ nav ul li a:hover::after{
 
 .btn:hover {
     background: lightskyblue;
-} 
+}
+
+/* Media Queries for Responsiveness with Font Size Adjustments */
+@media (max-width: 1024px) {
+    .work {
+        width: calc(48% - 40px); /* Two items per row on medium screens */
+        height: 400px; /* Adjust height for smaller screens */
+    }
+
+    .layer {
+        font-size: 15px; /* Slightly smaller font size */
+    }
+
+    .layer h3 {
+        font-size: 18px; /* Smaller headline size */
+    }
+
+    .layer p {
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 14px; /* Reduce button font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .work {
+        width: 100%; /* Full width for small screens */
+        height: 300px; /* Further adjust height */
+    }
+
+    .layer {
+        font-size: 14px; /* Compact font size */
+    }
+
+    .layer h3 {
+        font-size: 16px;
+    }
+
+    .layer p {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px; /* Smaller button text */
+        padding: 10px 30px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .layer {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: 12px;
+    }
+
+    .layer h3 {
+        font-size: 14px; /* Headline size for very small screens */
+        margin-bottom: 10px;
+    }
+
+    .layer p {
+        font-size: 11px; /* Description font size for small screens */
+    }
+
+    .layer a {
+        font-size: 14px; /* Smaller icons */
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .btn {
+        font-size: 10px;
+        padding: 8px 20px; /* Compact padding for the button */
+    }
+}
+
+
 
 /* ----------------------contact--------------------------- */
 .contacts {
     background-color: #2F2F2F;
     padding: 40px;
     color: #fff;
+    margin-top: 20px;
 }
 
 .row {
