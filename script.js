@@ -22,3 +22,29 @@ function openTab(tabId) {
 
 
 openTab('skills'); //first tab opens by default
+
+emailjs.init("WzUkvApTSmNyi5GF7");
+
+function sendEmail(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Send the email via EmailJS
+    emailjs.send("service_zrqvldw", "template_2rey6lp", {
+        name: name,
+        email: email,
+        message: message,
+    })
+    .then(
+        (response) => {
+            document.getElementById("msg").innerText = "Email sent successfully!";
+        },
+        (error) => {
+            document.getElementById("msg").innerText = "Failed to send email.";
+        }
+    );
+}

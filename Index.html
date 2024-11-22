@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/647f7a9d84.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="script.js"></script>
 </head>
 
@@ -208,8 +209,9 @@
                     <img src="./images/Straight5.png" alt="Penta-blocks">
                     <div class="layer">
                         <h3>Penta-blocks</h3>
-                        <p>This is for planning and organising your daily life. You can add, edit, and delete tasks.</p>
-                        <!-- Update href with the desired URL -->
+                        <p>Experience the thrill of strategic gameplay with our innovative game where the objective is to align 5 blocks in a straight line. 
+                            Combining skill, foresight, and creativity, players must carefully plan their moves to outwit opponents and claim victory. 
+                            Whether played casually or competitively, this game offers endless fun and challenges for players of all ages.</p>
                         <a href="https://penta-liner.vercel.app/" target="_blank">
                             <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -220,8 +222,8 @@
                     <img src="./images/REECO.png" alt="REECOWEAR IMAGE">
                     <div class="layer">
                         <h3>ReEcoWear Clothing</h3>
-                        <p>This is for planning and organising your daily life. You can add, edit, and delete tasks.</p>
-                        <!-- Update href with the desired URL -->
+                        <p>ReecoWear is an innovative e-commerce platform dedicated to sustainable fashion. it offers stylish, high-quality clothing crafted 
+                            entirely from recycled materials, merging environmental responsibility with modern design.</p>
                         <a href="https://reecowearclothing.netlify.app" target="_blank">
                             <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -232,8 +234,8 @@
                     <img src="./images/Book-Connect.png" alt="Book-Connect image">
                     <div class="layer">
                         <h3>Book-Connect App</h3>
-                        <p>This is for planning and organising your daily life. You can add, edit, and delete tasks.</p>
-                        <!-- Update href with the desired URL -->
+                        <p>Discover your next favorite read with our user-friendly book browsing app. Effortlessly explore a vast collection of books, 
+                        search by title, author, or genre, and enjoy customizable reading modes, including day and night settings for optimal comfort</p>
                         <a href="https://book-connect-self.vercel.app/" target="_blank">
                             <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -259,7 +261,8 @@
             <a href="./credits/A_Ndamase.pdf" download class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right">
-            <form action="/send-email" method="POST">
+            <form id="contactForm" onsubmit="sendEmail(event)">
+
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required><br><br>
                 
