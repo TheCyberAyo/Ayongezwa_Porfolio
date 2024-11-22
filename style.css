@@ -15,22 +15,21 @@ body {
 
 #header {
     width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    background-size: cover;
-    background-position: center;
+    background-color: #f9f9f9;
     padding: 10px;
+    overflow: hidden;
 }
 
 .container {
-    padding: 10px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .logo {
@@ -38,123 +37,140 @@ nav {
     height: 40px;
 }
 
-.skelly img {
-    padding-top: 100px;
-    max-width: 200px;
-    max-height: 200px;
-}
-nav ul li {
-    display: inline-block;
+nav ul {
+    display: flex;
     list-style: none;
-    margin: 10px 20px;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #000;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 800;
-    position: relative;
+    font-weight: bold;
+    color: #000;
 }
 
-nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: lightskyblue;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-
-nav ul li a:hover::after{
-    width:100%;
-}
-
-.container {
-    display: grid;
-    grid-template-areas: 
-    "picture content carousel"
-    "picture footer carousel";
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 4fr 1fr;
-    gap: 10px;
-}
-
-
-.container .content {
-    grid-area: content;
-    margin-top: 25%;
-    margin-left: 5%;
-    margin-right: 5%;
+.hero {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    color: black;
-    font-weight: bolder;
+    padding: 20px;
 }
 
-@keyframes mainColors {
-    0%{color: purple}
-    33%{color: red}
-    66%{color: blue}
+.content {
+    max-width: 50%;
+    text-align: center;
 }
 
-.container .content h1{
-    animation: mainColors 3s linear infinite;
-    font-size: 60px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight:bolder;
-    margin-top: 30px;
+
+@keyframes colorChange {
+    0% {
+        color: blue;
+    }
+    25% {
+        color: purple;
+    }
+    50% {
+        color: black;
+    }
+    75% {
+        color: pink;
+    }
+    100% {
+        color: blue;
+    }
 }
 
-.container .content h3{
-    font-size: 55px;
+.content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    animation: colorChange 4s infinite; /* 4 seconds duration, loops infinitely */
+}
+
+.content h3 {
+    font-size: 36px;
     font-style: italic;
-    font-weight: bold;
     color: lightskyblue;
-    text-shadow: #fff;
-    margin-top: 30px;
 }
 
-
-
-.container .content p{
-    font-size: 17px;
-    margin-top: 40px;
-    text-shadow: #0000FF;
+.content p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
 }
 
-.container .footer{
-    grid-area: footer;
-    margin-top: 50px;
+.image-container {
+    max-width: 40%;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cards {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px 0;
 }
 
-.oval{
-    text-decoration: none;
-    width: 130px;
-    height: 35px;
+.card {
+    flex: 1;
+    max-width: 300px;
+    background-color: #D3D3D3;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card h4 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.oval {
+    display: inline-block;
     background-color: green;
-    border-radius: 15%;
-    padding: 8px 11px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-.oval p a{
+.oval p a {
     text-decoration: none;
-    font-size: small;
-    color: black;
+    font-size: 14px;
+    color: white;
     font-weight: bold;
 }
 
-.oval p :hover{
-    color: blue;
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .content, .image-container {
+        max-width: 100%;
+    }
 }
 
 /*--------------------------------------about me--------------------------------*/
