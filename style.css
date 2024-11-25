@@ -78,6 +78,8 @@ nav ul li a:hover {
     color: lightskyblue;
 }
 
+
+
 .hero {
     display: flex;
     flex-wrap: wrap;
@@ -604,16 +606,16 @@ nav ul li a:hover {
 /* Media Queries for Responsiveness with Font Size Adjustments */
 @media (max-width: 1024px) {
     .work {
-        width: calc(48% - 40px); /* Two items per row on medium screens */
-        height: 400px; /* Adjust height for smaller screens */
+        width: calc(48% - 40px); 
+        height: 400px; 
     }
 
     .layer {
-        font-size: 15px; /* Slightly smaller font size */
+        font-size: 15px;
     }
 
     .layer h3 {
-        font-size: 18px; /* Smaller headline size */
+        font-size: 18px; 
     }
 
     .layer p {
@@ -621,18 +623,18 @@ nav ul li a:hover {
     }
 
     .btn {
-        font-size: 14px; /* Reduce button font size */
+        font-size: 14px; 
     }
 }
 
 @media (max-width: 768px) {
     .work {
-        width: 100%; /* Full width for small screens */
-        height: 300px; /* Further adjust height */
+        width: 100%;
+        height: 300px;
     }
 
     .layer {
-        font-size: 14px; /* Compact font size */
+        font-size: 14px; 
     }
 
     .layer h3 {
