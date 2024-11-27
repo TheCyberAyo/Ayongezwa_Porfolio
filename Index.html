@@ -163,21 +163,26 @@
         </div>
     </section>
     <!--- Certificates --->
-    <div class="certs">
-        <h1>My Certificates</h1>
-        <div class="certificate-container">
-            <button class="nav-button" id="prev" disabled>&larr;</button>
-            <div class="certificates" id="certificates">
-                <object src="Certs/Ayo_React.png" class="certificate">React PDF</object>
-                <object src="Certs/Ayo_Python.png"  class="certificate">Python PDF</object>
-                <object src="Certs/Ayo_Java.pdf"  class="certificate">Java PDF</object>
-                <iframe src="Certs/Ayo_full.png" class="certificate"></iframe>
-            </div>
-            <button class="nav-button" id="next">&rarr;</button>
+    <div class="cert-section-container" id="certification-container">
+        <div class="cert-item active" id="cert-1">
+          <img src="Certs/Ayo_full.png" alt="Certificate 1">
         </div>
-    </div>
+        <div class="cert-item" id="cert-2">
+          <img src="Certs/Ayo_React.png" alt="Certificate 2">
+        </div>
+        <div class="cert-item active" id="cert-1">
+            <img src="Certs/Ayo_Java.pdf" alt="Certificate 3">
+        </div>
+          <div class="cert-item" id="cert-2">
+            <img src="Certs/Ayo_Python.png" alt="Certificate 4">
+          </div>
+        <!-- Add more certificates here -->
+      </div>
     
-
+      <div class="cert-navigation">
+        <button id="prev-btn" disabled>Previous</button>
+        <button id="next-btn">Next</button>
+      </div>
     <!-------------------------Services--------------------->
     <div id="services">
         <div class="container2">

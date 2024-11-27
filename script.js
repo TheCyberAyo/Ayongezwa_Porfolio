@@ -25,34 +25,37 @@ function openTab(tabId) {
 
 openTab('skills'); //first tab opens by default
 
-const certificates = document.querySelector('#certificates');
-const prevButton = document.querySelector('#prev');
-const nextButton = document.querySelector('#next');
-let scrollPosition = 0;
+// Updated JavaScript logic for two items
+const certifications = document.querySelectorAll('.cert-item');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
 
-// Calculate the scroll step dynamically (two certificates)
-const certificateWidth = certificates.querySelector('.certificate').clientWidth + 10; // Includes margin
-const scrollStep = certificateWidth * 2; // Show two certificates at once
+let currentIndex = 0;
+const itemsToShow = 2; // Number of certificates to show at a time
 
-prevButton.addEventListener('click', () => {
-    scrollPosition = Math.max(0, scrollPosition - scrollStep);
-    certificates.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-    updateButtons();
-});
+function updateDisplay() {
+    certifications.forEach((cert, index) => {
+        // Show the items within the range of currentIndex and itemsToShow
+        const isVisible = index >= currentIndex && index < currentIndex + itemsToShow;
+        cert.classList.toggle('active', isVisible);
+    });
 
-nextButton.addEventListener('click', () => {
-    const maxScroll = certificates.scrollWidth - certificates.clientWidth;
-    scrollPosition = Math.min(maxScroll, scrollPosition + scrollStep);
-    certificates.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-    updateButtons();
-});
-
-function updateButtons() {
-    const maxScroll = certificates.scrollWidth - certificates.clientWidth;
-    prevButton.disabled = scrollPosition <= 0;
-    nextButton.disabled = scrollPosition >= maxScroll;
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= certifications.length - itemsToShow;
 }
 
-updateButtons();
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex -= itemsToShow;
+        updateDisplay();
+    }
+});
 
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < certifications.length - itemsToShow) {
+        currentIndex += itemsToShow;
+        updateDisplay();
+    }
+});
 
+updateDisplay();
