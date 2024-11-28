@@ -407,63 +407,153 @@ nav ul li a:hover {
     }
 }
 /* -----------------Certificates------------------- */
+/* General Styles */
+article {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Hustle Container Styling */
+.hustle {
+    display: flex; /* Horizontal layout for the computer dude and certificates */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Add spacing between columns */
+    width: 100%;
+}
+
+/* Computer Dude Styling */
+.computer-dude {
+    flex: 0 0 20%; /* Smaller container width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.computer-dude img {
+    max-width: 80%; /* Reduce the size of the image */
+    opacity: 0.3; /* De-emphasize the computer dude */
+    border-radius: 8px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.computer-dude img:hover {
+    opacity: 0.5; /* Slight increase in opacity on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Certificates Section Styling */
+.certs {
+    flex: 0 0 75%; /* Larger container for certificates */
+}
+
+/* Certificates Container */
 .cert-section-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: grey;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.cert-items-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.cert-item {
-    display: none;
-    flex: 0 0 48%; /* Adjusts width for two items side-by-side */
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.cert-item img {
+    flex-wrap: wrap; /* Enable flexible layout for certificates */
+    justify-content: center; /* Center certificates */
+    gap: 20px; /* Add space between certificates */
     width: 100%;
-    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Certificate Items */
+.cert-item {
+    flex: 0 0 45%; /* Two certificates per row on larger screens */
+    max-width: 400px;
+    text-align: center;
+    display: none; /* Hidden by default */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .cert-item.active {
-    display: block;
+    display: block; /* Show active certificates */
+    opacity: 1;
+    transform: scale(1);
 }
 
+/* Certificate Image Styling with Aspect Ratio */
+.cert-item img {
+    width: 100%; /* Full width of the container */
+    aspect-ratio: 4 / 3; /* Maintain a consistent aspect ratio */
+    object-fit: contain; /* Fit the image inside the container without cropping */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.cert-item img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Navigation Buttons */
 .cert-navigation {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
+    justify-content: center; /* Center the navigation buttons */
+    gap: 10px;
 }
 
 .cert-navigation button {
     padding: 10px 20px;
-    background-color: lightskyblue;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.cert-navigation button:disabled {
-    background-color: #ccc;
+.cert-navigation button:hover:not(:disabled) {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+    opacity: 0.5;
     cursor: not-allowed;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hustle {
+        flex-direction: column; /* Stack "computer dude" and certificates vertically */
+    }
+
+    .computer-dude {
+        display: none; /* Reset width for vertical stacking */
+    }
+
+    .computer-dude img {
+        max-width: 60%; /* Further reduce image size on smaller screens */
+    }
+
+    .certs {
+        flex: 0 0 auto; /* Reset width for vertical stacking */
+    }
+
+    .cert-item {
+        flex: 0 0 100%; /* Full width for mobile */
+        max-width: 100%;
+    }
+
+    .cert-item img {
+        max-height: 200px; /* Limit image height on smaller screens */
+    }
+}
 
 /* -------------------------------------Services------------------------ */
 #services {
