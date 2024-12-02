@@ -279,12 +279,6 @@ nav ul li a:hover {
     background-color: #D3D3D3;
 }
 
-.about-me-text{
-    color: black;
-    font-weight: bold;
-    /* padding: 20px; */
-}
-
 .about-me {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping for smaller screens */
@@ -293,6 +287,52 @@ nav ul li a:hover {
     padding: 20px;
     background-color: #D3D3D3; /* Background remains consistent */
 }
+
+.about-me-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align:left;
+}
+
+.about-me-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-box {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: lightskyblue;
+    background-color: grey;
+    font-size: large;
+    border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about-me-text {
+        font-size: 1.75rem;
+    }
+
+    .info-box {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me-text {
+        font-size: 1.5rem;
+    }
+
+    .info-box {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}
+/* ..........  */
+
 
 .descriptive-section {
     display: flex;
@@ -313,14 +353,14 @@ nav ul li a:hover {
 }
 
 .info {
-    padding-right: 10px; /* Adds spacing between sections */
+    padding-right: 0px; /* Adds spacing between sections */
 }
 
 .description {
     padding-left: 10px; /* Adds spacing between sections */
 }
 
-.info .info-box {
+/* .info .info-box {
     color: black;
     font-size: small;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -329,32 +369,38 @@ nav ul li a:hover {
     border: lightskyblue;
     border-radius: 25%;
     border-style: ridge;
-    width: 100%; /* Adjusted for responsiveness */
-}
+    width: 100%; /* Adjusted for responsiveness 
+}*/
 
-.info .tabs {
+
+/* General styles */
+.tabs {
     color: black;
     font-size: small;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 60px 40px 10px 40px;
-    padding: 10px 10px;
+    margin: 20px auto;
+    padding: 10px 20px;
     border: lightskyblue;
-    /* border-style: dashed; */
     border-radius: 10%;
-    width: 100%; /* Adjusted for responsiveness */
+    width: 100%;
+    max-width: 800px; /* Limit width for larger screens */
+    box-sizing: border-box;
 }
 
 .tab-titles {
     display: flex;
-    padding: 8px 40px;
+    flex-wrap: wrap; /* Wrap tabs on smaller screens */
+    justify-content: center; /* Center tabs when wrapped */
+    gap: 20px; /* Add space between items */
+    padding: 8px 20px;
 }
 
 .tab-links {
-    margin-right: 50px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     cursor: pointer;
     position: relative;
+    text-align: center;
 }
 
 .tab-links::after {
@@ -363,8 +409,9 @@ nav ul li a:hover {
     height: 3px;
     background: blue;
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: -8px;
+    transform: translateX(-50%);
     transition: 0.5s;
 }
 
@@ -372,9 +419,14 @@ nav ul li a:hover {
     width: 50%;
 }
 
+.tab-contents ul {
+    padding: 0;
+}
+
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
+    line-height: 1.5;
 }
 
 .tab-contents ul li span {
@@ -395,6 +447,49 @@ nav ul li a:hover {
     display: block;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .tabs {
+        padding: 10px;
+        border-radius: 5%; /* Slightly reduce border radius for smaller screens */
+    }
+
+    .tab-links {
+        font-size: 14px; /* Reduce tab font size */
+    }
+
+    .tab-titles {
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+
+    .tab-contents ul li span,
+    .tab-contents ul li strong {
+        font-size: 12px; /* Adjust font sizes in content */
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-titles {
+        flex-direction: column; /* Stack tabs vertically */
+        align-items: center;
+    }
+
+    .tab-links {
+        font-size: 14px;
+        margin-right: 0; /* Remove margin for vertical alignment */
+    }
+
+    .tabs {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .tab-contents ul li {
+        margin: 8px 0;
+    }
+}
+
+
 .description {
     padding-top: 50px;
 }
@@ -410,7 +505,7 @@ nav ul li a:hover {
 
 .skill-description h4 {
     margin-bottom: 20px;
-    color: lightskyblue;
+    color: blue;
     font-weight: bolder;
 }
 
