@@ -26,11 +26,13 @@ body {
     padding: 20px;
 }
 
+/* Base Styles */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #A9A9A9;
+    padding: 10px 20px;
 }
 
 .logo {
@@ -42,6 +44,8 @@ nav ul {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 nav ul li {
@@ -75,8 +79,68 @@ nav ul li a:hover::before {
 }
 
 nav ul li a:hover {
-    color: lightskyblue;
+    color: white;
 }
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 260px;
+        right: 0px;
+        background-color: #A9A9A9;
+        border-radius: 5px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        transform: translateY(-100%);
+        /* opacity: 0; */
+        /* pointer-events: none; */
+        width: 200px;
+        z-index: 999;
+        
+    }
+
+    nav ul.active {
+        transform: translateY(0);
+        opacity: 1;
+        background-color: #ddd;
+        pointer-events: auto;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+        opacity: 0.5;
+    }
+
+}
+ 
+
+  
+
 
 
 
@@ -207,6 +271,7 @@ nav ul li a:hover {
     }
 }
 /* -------------------------C-------------------------------------- */
+
 /*--------------------------------------about me--------------------------------*/
 
 #about {

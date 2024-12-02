@@ -1,4 +1,13 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const sidemenu = document.getElementById('sidemenu');
 
+  // Toggle the 'active' class on the menu when the button is clicked
+  menuToggle.addEventListener('click', () => {
+      sidemenu.classList.toggle('active');
+      console.log("clicked")
+  });
+});
 
 
 function openTab(tabId) {
