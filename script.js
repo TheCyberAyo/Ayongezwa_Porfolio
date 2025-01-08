@@ -1,13 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menu-toggle');
-  const sidemenu = document.getElementById('sidemenu');
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu");
 
-  menuToggle.addEventListener('click', () => {
-      sidemenu.classList.toggle('active');
-      console.log("clicked")
+  menuToggle.addEventListener("click", function() {
+      const expanded = menuToggle.getAttribute("aria-expanded") === "true" || false;
+      menuToggle.setAttribute("aria-expanded", !expanded);
+      menu.classList.toggle("active");
   });
 });
-
 
 function openTab(tabId) {
     var tabs = document.querySelectorAll('.tab-contents'); //gets tab content elements

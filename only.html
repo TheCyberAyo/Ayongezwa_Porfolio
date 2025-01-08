@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        /* General Styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #A9A9A9;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            width: 140px;
+            height: 40px;
+        }
+
+        .navbar {
+            overflow: hidden;
+        }
+
+        .navbar .menu-toggle {
+            display: none;
+            color: white;
+            padding: 14px 20px;
+            cursor: pointer;
+        }
+
+        .navbar .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            max-height: none; /* For desktop view */
+        }
+
+        .navbar .menu li {
+            display: inline;
+        }
+
+        .navbar .menu li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar .menu li a:hover {
+            background-color: lightskyblue;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .navbar .menu-toggle {
+                display: block;
+            }
+
+            .navbar .menu {
+                display: flex;
+                flex-direction: column;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+            }
+
+            .navbar .menu li {
+                display: block;
+            }
+
+            .navbar .menu.active {
+                max-height: 500px; /* Set this based on menu content height */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="images/threalAYON.png" class="logo" alt="Logo">
+        <div class="navbar">
+            <span class="menu-toggle" aria-expanded="false">☰ Menu</span>
+            <ul class="menu">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contacts">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+
+            menuToggle.addEventListener("click", function() {
+                const expanded = menuToggle.getAttribute("aria-expanded") === "true" || false;
+                menuToggle.setAttribute("aria-expanded", !expanded);
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
